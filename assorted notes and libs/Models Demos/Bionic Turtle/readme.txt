@@ -1,0 +1,4 @@
+http://www.bionicturtle.com/learn/article/vasicek_is_a_simple_handy_one_factor_model_for_interest_rate_process/
+
+http://www.bionicturtle.com/learn/article/using_solver_to_perform_non_linear_interpolation_to_build_a_treasury_term_s/
+

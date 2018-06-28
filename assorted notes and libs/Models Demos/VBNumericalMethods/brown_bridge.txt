@@ -1,0 +1,25 @@
+Function Brownian_Bridge(n as long, start as double, end as double)
+
+      Dim i As Long
+      Dim W(), t() As Double
+
+ReDim W(0 To n)
+ReDim t(0 To n)
+
+For i = 0 To n
+    t(i) = i / n
+Next i
+
+W(0) = start
+W(n) = end
+
+For i = 1 To n - 1
+    Phi = Gauss(0, 1)
+    W(i) = ((t(n) - t(i)) / (t(n) - t(0))) * W(0) + ((t(i) - t(0)) / (t(n)
+- t(0))) * W(n) + Phi * Sqr((t(i) - t(0)) * (t(n) - t(i)) / (t(n) - t(0)))
+Next i
+
+Brownian_Bridge=W
+
+End Sub
+

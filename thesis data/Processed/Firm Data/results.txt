@@ -1,0 +1,510 @@
+Retrieved Vasicek parameter data from binary file
+Elapsed time is 2.072569 seconds.
+ 
+Loading firm-bond pairs:
+Successfully loaded collection of companies for param estimation.
+Total # companies found: 14
+ 
+Retrieving historical bond price observations for: 37390T
+Successfully loaded historic bond price data for: 37390T
+Total # observations found: 1257
+Total processing time: 0.55129
+ 
+Retrieving share price observations for: 37390T
+Successfully loaded share price data for: 37390T
+Total # observations found: 1808
+Total processing time: 1.0488
+ 
+Loading historic firm financials for: 37390T
+Successfully loaded historical financial data for: 37390T
+Total # yearly observations found: 6
+Total processing time: 0.021001
+Calculated Merton MLE of 2002 asset params-> mu:0.17615, sigma: 0.34759
+Calculated LS MLE of 2002 asset params-> mu:0.17616, sigma: 0.34757
+Estimated asset values for firm: ROCKWELL COLLINS INCORPORATED for year: 2002
+Calculated Merton MLE of 2003 asset params-> mu:0.20956, sigma: 0.19949
+Calculated LS MLE of 2003 asset params-> mu:0.20956, sigma: 0.19949
+Estimated asset values for firm: ROCKWELL COLLINS INCORPORATED for year: 2003
+Calculated Merton MLE of 2004 asset params-> mu:0.26055, sigma: 0.19938
+Calculated LS MLE of 2004 asset params-> mu:0.26055, sigma: 0.19938
+Estimated asset values for firm: ROCKWELL COLLINS INCORPORATED for year: 2004
+Calculated Merton MLE of 2005 asset params-> mu:0.17374, sigma: 0.17527
+Calculated LS MLE of 2005 asset params-> mu:0.17374, sigma: 0.17527
+Estimated asset values for firm: ROCKWELL COLLINS INCORPORATED for year: 2005
+Calculated Merton MLE of 2006 asset params-> mu:0.27635, sigma: 0.17137
+Calculated LS MLE of 2006 asset params-> mu:0.27635, sigma: 0.17137
+Estimated asset values for firm: ROCKWELL COLLINS INCORPORATED for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.1425, sigma: 0.20069
+Calculated LS MLE of 2007 asset params-> mu:0.1425, sigma: 0.20069
+Estimated asset values for firm: ROCKWELL COLLINS INCORPORATED for year: 2007
+Total time taken: 1145.5917
+ 
+Retrieving historical bond price observations for: 21022K
+Successfully loaded historic bond price data for: 21022K
+Total # observations found: 1674
+Total processing time: 0.69525
+ 
+Retrieving share price observations for: 21022K
+Successfully loaded share price data for: 21022K
+Total # observations found: 1935
+Total processing time: 1.0992
+ 
+Loading historic firm financials for: 21022K
+Successfully loaded historical financial data for: 21022K
+Total # yearly observations found: 7
+Total processing time: 0.010206
+Calculated Merton MLE of 2001 asset params-> mu:-0.22848, sigma: 0.37398
+Calculated LS MLE of 2001 asset params-> mu:-0.22845, sigma: 0.37398
+Estimated asset values for firm: SCHLUMBERGER TECHNOLOGY CORPORATION for year: 2001
+Calculated Merton MLE of 2002 asset params-> mu:-0.10394, sigma: 0.29068
+Calculated LS MLE of 2002 asset params-> mu:-0.10395, sigma: 0.29068
+Estimated asset values for firm: SCHLUMBERGER TECHNOLOGY CORPORATION for year: 2002
+Calculated Merton MLE of 2003 asset params-> mu:0.20177, sigma: 0.18841
+Calculated LS MLE of 2003 asset params-> mu:0.20177, sigma: 0.18841
+Estimated asset values for firm: SCHLUMBERGER TECHNOLOGY CORPORATION for year: 2003
+Calculated Merton MLE of 2004 asset params-> mu:0.17347, sigma: 0.19139
+Calculated LS MLE of 2004 asset params-> mu:0.17347, sigma: 0.19139
+Estimated asset values for firm: SCHLUMBERGER TECHNOLOGY CORPORATION for year: 2004
+Calculated Merton MLE of 2005 asset params-> mu:0.38353, sigma: 0.23267
+Calculated LS MLE of 2005 asset params-> mu:0.38353, sigma: 0.23267
+Estimated asset values for firm: SCHLUMBERGER TECHNOLOGY CORPORATION for year: 2005
+Calculated Merton MLE of 2006 asset params-> mu:0.24775, sigma: 0.34308
+Calculated LS MLE of 2006 asset params-> mu:0.24775, sigma: 0.34308
+Estimated asset values for firm: SCHLUMBERGER TECHNOLOGY CORPORATION for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.50082, sigma: 0.32146
+Calculated LS MLE of 2007 asset params-> mu:0.50082, sigma: 0.32146
+Estimated asset values for firm: SCHLUMBERGER TECHNOLOGY CORPORATION for year: 2007
+Total time taken: 1441.6527
+ 
+Retrieving historical bond price observations for: 39405M
+Successfully loaded historic bond price data for: 39405M
+Total # observations found: 1166
+Total processing time: 0.49493
+ 
+Retrieving share price observations for: 39405M
+Successfully loaded share price data for: 39405M
+Total # observations found: 2062
+Total processing time: 1.1756
+ 
+Loading historic firm financials for: 39405M
+Successfully loaded historical financial data for: 39405M
+Total # yearly observations found: 6
+Total processing time: 0.009565
+Calculated Merton MLE of 2003 asset params-> mu:-0.040213, sigma: 0.2643
+Calculated LS MLE of 2003 asset params-> mu:-0.040177, sigma: 0.26432
+Estimated asset values for firm: SK TELECOM COMPANY LIMITED for year: 2003
+Calculated Merton MLE of 2004 asset params-> mu:0.13437, sigma: 0.20282
+Calculated LS MLE of 2004 asset params-> mu:0.13437, sigma: 0.20282
+Estimated asset values for firm: SK TELECOM COMPANY LIMITED for year: 2004
+Calculated Merton MLE of 2005 asset params-> mu:-0.0040446, sigma: 0.15229
+Calculated LS MLE of 2005 asset params-> mu:-0.0040446, sigma: 0.15229
+Estimated asset values for firm: SK TELECOM COMPANY LIMITED for year: 2005
+Calculated Merton MLE of 2006 asset params-> mu:0.21384, sigma: 0.17919
+Calculated LS MLE of 2006 asset params-> mu:0.21384, sigma: 0.17919
+Estimated asset values for firm: SK TELECOM COMPANY LIMITED for year: 2006
+Tried to estimate SK TELECOM COMPANY LIMITED for the year 2007 but failed
+Total time taken: 911.9169
+ 
+Retrieving historical bond price observations for: 466164
+Successfully loaded historic bond price data for: 466164
+Total # observations found: 1061
+Total processing time: 0.42079
+ 
+Retrieving share price observations for: 466164
+Successfully loaded share price data for: 466164
+Total # observations found: 2181
+Total processing time: 1.2479
+ 
+Loading historic firm financials for: 466164
+Successfully loaded historical financial data for: 466164
+Total # yearly observations found: 7
+Total processing time: 0.0099852
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.035
+Calculated Merton MLE of 2003 asset params-> mu:0.059686, sigma: 0.029754
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.035
+Calculated LS MLE of 2003 asset params-> mu:0.059691, sigma: 0.029756
+Estimated asset values for firm: PUBLIC SERVICE ENTERPRISE GROUP INCORPORATED for year: 2003
+Guessed a small value of sigma, turn around now:-0.16
+Guessed a small value of sigma, turn around now:-0.06
+Guessed a small value of sigma, turn around now:-0.01
+Calculated Merton MLE of 2004 asset params-> mu:0.048145, sigma: 0.030385
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.035
+Calculated LS MLE of 2004 asset params-> mu:0.048187, sigma: 0.030381
+Estimated asset values for firm: PUBLIC SERVICE ENTERPRISE GROUP INCORPORATED for year: 2004
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.035
+Calculated Merton MLE of 2005 asset params-> mu:0.080814, sigma: 0.053173
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.035
+Calculated LS MLE of 2005 asset params-> mu:0.080873, sigma: 0.053171
+Estimated asset values for firm: PUBLIC SERVICE ENTERPRISE GROUP INCORPORATED for year: 2005
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.035
+Calculated Merton MLE of 2006 asset params-> mu:0.042658, sigma: 0.056628
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.01
+Guessed a small value of sigma, turn around now:-0.035
+Calculated LS MLE of 2006 asset params-> mu:0.042658, sigma: 0.056628
+Estimated asset values for firm: PUBLIC SERVICE ENTERPRISE GROUP INCORPORATED for year: 2006
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Calculated Merton MLE of 2007 asset params-> mu:0.1765, sigma: 0.1001
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Calculated LS MLE of 2007 asset params-> mu:0.17647, sigma: 0.10006
+Estimated asset values for firm: PUBLIC SERVICE ENTERPRISE GROUP INCORPORATED for year: 2007
+Total time taken: 1405.4076
+ 
+Retrieving historical bond price observations for: 1778UC
+Successfully loaded historic bond price data for: 1778UC
+Total # observations found: 228
+Total processing time: 0.084952
+ 
+Retrieving share price observations for: 1778UC
+Successfully loaded share price data for: 1778UC
+Total # observations found: 1687
+Total processing time: 0.8843
+ 
+Loading historic firm financials for: 1778UC
+Successfully loaded historical financial data for: 1778UC
+Total # yearly observations found: 7
+Total processing time: 0.010023
+Guessed a small value of sigma, turn around now:-0.01
+Calculated Merton MLE of 2006 asset params-> mu:0.18441, sigma: 0.10531
+Guessed a small value of sigma, turn around now:-0.01
+Calculated LS MLE of 2006 asset params-> mu:0.18441, sigma: 0.10531
+Estimated asset values for firm: COCA-COLA COMPANY (THE) for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.26725, sigma: 0.1407
+Calculated LS MLE of 2007 asset params-> mu:0.26725, sigma: 0.1407
+Estimated asset values for firm: COCA-COLA COMPANY (THE) for year: 2007
+Total time taken: 419.7082
+ 
+Retrieving historical bond price observations for: 37413V
+Successfully loaded historic bond price data for: 37413V
+Total # observations found: 1257
+Total processing time: 0.52693
+ 
+Retrieving share price observations for: 37413V
+Successfully loaded share price data for: 37413V
+Total # observations found: 2124
+Total processing time: 1.2032
+ 
+Loading historic firm financials for: 37413V
+Successfully loaded historical financial data for: 37413V
+Total # yearly observations found: 7
+Total processing time: 0.0097385
+Calculated Merton MLE of 2002 asset params-> mu:-0.21038, sigma: 0.19362
+Calculated LS MLE of 2002 asset params-> mu:-0.22533, sigma: 0.13417
+Estimated asset values for firm: MILLICOM INTERNATIONAL CELLULAR SA for year: 2002
+Calculated Merton MLE of 2003 asset params-> mu:0.6305, sigma: 0.20033
+Calculated LS MLE of 2003 asset params-> mu:0.51829, sigma: 0.17045
+Estimated asset values for firm: MILLICOM INTERNATIONAL CELLULAR SA for year: 2003
+Calculated Merton MLE of 2004 asset params-> mu:0.14847, sigma: 0.26286
+Calculated LS MLE of 2004 asset params-> mu:0.1469, sigma: 0.26271
+Estimated asset values for firm: MILLICOM INTERNATIONAL CELLULAR SA for year: 2004
+Calculated Merton MLE of 2005 asset params-> mu:0.13544, sigma: 0.20148
+Calculated LS MLE of 2005 asset params-> mu:0.13537, sigma: 0.20148
+Estimated asset values for firm: MILLICOM INTERNATIONAL CELLULAR SA for year: 2005
+Calculated Merton MLE of 2006 asset params-> mu:0.59776, sigma: 0.34937
+Calculated LS MLE of 2006 asset params-> mu:0.59717, sigma: 0.35021
+Estimated asset values for firm: MILLICOM INTERNATIONAL CELLULAR SA for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.61289, sigma: 0.4562
+Calculated LS MLE of 2007 asset params-> mu:0.61237, sigma: 0.45591
+Estimated asset values for firm: MILLICOM INTERNATIONAL CELLULAR SA for year: 2007
+Total time taken: 1473.778
+ 
+Retrieving historical bond price observations for: 38875H
+Successfully loaded historic bond price data for: 38875H
+Total # observations found: 1191
+Total processing time: 0.49975
+ 
+Retrieving share price observations for: 38875H
+Successfully loaded share price data for: 38875H
+Total # observations found: 2124
+Total processing time: 1.2005
+ 
+Loading historic firm financials for: 38875H
+Successfully loaded historical financial data for: 38875H
+Total # yearly observations found: 7
+Total processing time: 0.0096378
+Calculated Merton MLE of 2003 asset params-> mu:0.34509, sigma: 0.16116
+Calculated LS MLE of 2003 asset params-> mu:0.34498, sigma: 0.16105
+Estimated asset values for firm: COMSTOCK RESOURCES INCORPORATED for year: 2003
+Calculated Merton MLE of 2004 asset params-> mu:0.10625, sigma: 0.26889
+Calculated LS MLE of 2004 asset params-> mu:0.10618, sigma: 0.26888
+Estimated asset values for firm: COMSTOCK RESOURCES INCORPORATED for year: 2004
+Calculated Merton MLE of 2005 asset params-> mu:0.28076, sigma: 0.26341
+Calculated LS MLE of 2005 asset params-> mu:0.28064, sigma: 0.26339
+Estimated asset values for firm: COMSTOCK RESOURCES INCORPORATED for year: 2005
+Calculated Merton MLE of 2006 asset params-> mu:0.016908, sigma: 0.27912
+Calculated LS MLE of 2006 asset params-> mu:0.016908, sigma: 0.27912
+Estimated asset values for firm: COMSTOCK RESOURCES INCORPORATED for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.14287, sigma: 0.22956
+Calculated LS MLE of 2007 asset params-> mu:0.14276, sigma: 0.2295
+Estimated asset values for firm: COMSTOCK RESOURCES INCORPORATED for year: 2007
+Total time taken: 1016.895
+ 
+Retrieving historical bond price observations for: 46389R
+Successfully loaded historic bond price data for: 46389R
+Total # observations found: 1071
+Total processing time: 0.42121
+ 
+Retrieving share price observations for: 46389R
+Successfully loaded share price data for: 46389R
+Total # observations found: 1527
+Total processing time: 0.79623
+ 
+Loading historic firm financials for: 46389R
+Successfully loaded historical financial data for: 46389R
+Total # yearly observations found: 7
+Total processing time: 0.010034
+Guessed a small value of sigma, turn around now:-0.01
+Calculated Merton MLE of 2003 asset params-> mu:0.13931, sigma: 0.1094
+Guessed a small value of sigma, turn around now:-0.01
+Calculated LS MLE of 2003 asset params-> mu:0.13298, sigma: 0.10665
+Estimated asset values for firm: BLOUNT INCORPORATED for year: 2003
+Calculated Merton MLE of 2004 asset params-> mu:0.26578, sigma: 0.12739
+Calculated LS MLE of 2004 asset params-> mu:0.26484, sigma: 0.12698
+Estimated asset values for firm: BLOUNT INCORPORATED for year: 2004
+Calculated Merton MLE of 2005 asset params-> mu:-0.024721, sigma: 0.1698
+Calculated LS MLE of 2005 asset params-> mu:-0.024721, sigma: 0.1698
+Estimated asset values for firm: BLOUNT INCORPORATED for year: 2005
+Calculated Merton MLE of 2006 asset params-> mu:-0.07999, sigma: 0.18776
+Calculated LS MLE of 2006 asset params-> mu:-0.079981, sigma: 0.18776
+Estimated asset values for firm: BLOUNT INCORPORATED for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.023089, sigma: 0.24992
+Calculated LS MLE of 2007 asset params-> mu:0.023041, sigma: 0.24983
+Estimated asset values for firm: BLOUNT INCORPORATED for year: 2007
+Total time taken: 1252.8162
+ 
+Retrieving historical bond price observations for: 81359Q
+Successfully loaded historic bond price data for: 81359Q
+Total # observations found: 496
+Total processing time: 0.18131
+ 
+Retrieving share price observations for: 81359Q
+Successfully loaded share price data for: 81359Q
+Total # observations found: 2057
+Total processing time: 1.156
+ 
+Loading historic firm financials for: 81359Q
+Successfully loaded historical financial data for: 81359Q
+Total # yearly observations found: 7
+Total processing time: 0.0096517
+Calculated Merton MLE of 2005 asset params-> mu:0.30284, sigma: 0.41464
+Calculated LS MLE of 2005 asset params-> mu:0.30284, sigma: 0.41464
+Estimated asset values for firm: BERRY PETROLEUM COMPANY for year: 2005
+Calculated Merton MLE of 2006 asset params-> mu:0.11314, sigma: 0.33693
+Calculated LS MLE of 2006 asset params-> mu:0.11314, sigma: 0.33693
+Estimated asset values for firm: BERRY PETROLEUM COMPANY for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.36163, sigma: 0.25959
+Calculated LS MLE of 2007 asset params-> mu:0.36172, sigma: 0.25959
+Estimated asset values for firm: BERRY PETROLEUM COMPANY for year: 2007
+Total time taken: 582.166
+ 
+Retrieving historical bond price observations for: 83106D
+Successfully loaded historic bond price data for: 83106D
+Total # observations found: 463
+Total processing time: 0.16926
+ 
+Retrieving share price observations for: 83106D
+Successfully loaded share price data for: 83106D
+Total # observations found: 1065
+Total processing time: 0.51624
+ 
+Loading historic firm financials for: 83106D
+Successfully loaded historical financial data for: 83106D
+Total # yearly observations found: 4
+Total processing time: 0.0069759
+Calculated Merton MLE of 2005 asset params-> mu:-0.1192, sigma: 0.20417
+Calculated LS MLE of 2005 asset params-> mu:-0.1192, sigma: 0.20417
+Estimated asset values for firm: WCA WASTE CORPORATION for year: 2005
+Calculated Merton MLE of 2006 asset params-> mu:0.057356, sigma: 0.16477
+Calculated LS MLE of 2006 asset params-> mu:0.057332, sigma: 0.16477
+Estimated asset values for firm: WCA WASTE CORPORATION for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:-0.047598, sigma: 0.18924
+Calculated LS MLE of 2007 asset params-> mu:-0.04775, sigma: 0.1891
+Estimated asset values for firm: WCA WASTE CORPORATION for year: 2007
+Total time taken: 721.1104
+ 
+Retrieving historical bond price observations for: 84902Q
+Successfully loaded historic bond price data for: 84902Q
+Total # observations found: 425
+Total processing time: 0.15534
+ 
+Retrieving share price observations for: 84902Q
+Successfully loaded share price data for: 84902Q
+Total # observations found: 2014
+Total processing time: 1.1331
+ 
+Loading historic firm financials for: 84902Q
+Successfully loaded historical financial data for: 84902Q
+Total # yearly observations found: 7
+Total processing time: 0.0099833
+Calculated Merton MLE of 2006 asset params-> mu:0.26965, sigma: 0.26448
+Calculated LS MLE of 2006 asset params-> mu:0.26965, sigma: 0.26448
+Estimated asset values for firm: BALDOR ELECTRIC COMPANY for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.10742, sigma: 0.3252
+Calculated LS MLE of 2007 asset params-> mu:0.10742, sigma: 0.3252
+Estimated asset values for firm: BALDOR ELECTRIC COMPANY for year: 2007
+Total time taken: 330.9826
+ 
+Retrieving historical bond price observations for: 97716L
+Successfully loaded historic bond price data for: 97716L
+Total # observations found: 323
+Total processing time: 0.12042
+ 
+Retrieving share price observations for: 97716L
+Successfully loaded share price data for: 97716L
+Total # observations found: 911
+Total processing time: 0.43707
+ 
+Loading historic firm financials for: 97716L
+Successfully loaded historical financial data for: 97716L
+Total # yearly observations found: 5
+Total processing time: 0.0088133
+Calculated Merton MLE of 2006 asset params-> mu:0.095057, sigma: 0.384
+Calculated LS MLE of 2006 asset params-> mu:0.095055, sigma: 0.384
+Estimated asset values for firm: W&T OFFSHORE INCORPORATED for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.074793, sigma: 0.21172
+Calculated LS MLE of 2007 asset params-> mu:0.074793, sigma: 0.21172
+Estimated asset values for firm: W&T OFFSHORE INCORPORATED for year: 2007
+Total time taken: 365.4643
+ 
+Retrieving historical bond price observations for: 66291F
+Successfully loaded historic bond price data for: 66291F
+Total # observations found: 610
+Total processing time: 0.22365
+ 
+Retrieving share price observations for: 66291F
+Successfully loaded share price data for: 66291F
+Total # observations found: 1681
+Total processing time: 0.8819
+ 
+Loading historic firm financials for: 66291F
+Successfully loaded historical financial data for: 66291F
+Total # yearly observations found: 7
+Total processing time: 0.0096117
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Calculated Merton MLE of 2005 asset params-> mu:0.14523, sigma: 0.097668
+Calculated LS MLE of 2005 asset params-> mu:0.14519, sigma: 0.097668
+Estimated asset values for firm: DEAN FOODS COMPANY for year: 2005
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Calculated Merton MLE of 2006 asset params-> mu:0.075488, sigma: 0.097069
+Guessed a small value of sigma, turn around now:-0.0575
+Guessed a small value of sigma, turn around now:-0.01
+Calculated LS MLE of 2006 asset params-> mu:0.075488, sigma: 0.097069
+Estimated asset values for firm: DEAN FOODS COMPANY for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.0021729, sigma: 0.13228
+Calculated LS MLE of 2007 asset params-> mu:0.002206, sigma: 0.13228
+Estimated asset values for firm: DEAN FOODS COMPANY for year: 2007
+Total time taken: 797.1967
+ 
+Retrieving historical bond price observations for: 48998L
+Successfully loaded historic bond price data for: 48998L
+Total # observations found: 907
+Total processing time: 0.36052
+ 
+Retrieving share price observations for: 48998L
+Successfully loaded share price data for: 48998L
+Total # observations found: 3290
+Total processing time: 2.0587
+ 
+Loading historic firm financials for: 48998L
+Successfully loaded historical financial data for: 48998L
+Total # yearly observations found: 7
+Total processing time: 0.0096539
+Calculated Merton MLE of 2004 asset params-> mu:0.25648, sigma: 0.15427
+Calculated LS MLE of 2004 asset params-> mu:0.25648, sigma: 0.15427
+Estimated asset values for firm: ANIXTER INCORPORATED for year: 2004
+Calculated Merton MLE of 2005 asset params-> mu:0.087127, sigma: 0.19522
+Calculated LS MLE of 2005 asset params-> mu:0.087127, sigma: 0.19522
+Estimated asset values for firm: ANIXTER INCORPORATED for year: 2005
+Calculated Merton MLE of 2006 asset params-> mu:0.21335, sigma: 0.19507
+Calculated LS MLE of 2006 asset params-> mu:0.21341, sigma: 0.19507
+Estimated asset values for firm: ANIXTER INCORPORATED for year: 2006
+Calculated Merton MLE of 2007 asset params-> mu:0.17662, sigma: 0.23211
+Calculated LS MLE of 2007 asset params-> mu:0.17662, sigma: 0.2321
+Estimated asset values for firm: ANIXTER INCORPORATED for year: 2007
+Total time taken: 852.6452
+Retrieved Vasicek parameter data from binary file
+Elapsed time is 854.690684 seconds.
+ 
+Loading firm-bond pairs:
+Successfully loaded collection of companies for param estimation.
+
+
+AND THEN THE PATCH:
+
+
+
+Retrieved Vasicek parameter data from binary file
+Elapsed time is 20160.505227 seconds.
+ 
+Loading firm-bond pairs:
+Successfully loaded collection of companies for param estimation.
+Total # companies found: 14
+ 
+Begin processing firm ROCKWELL COLLINS INCORPORATED
+Total time taken: 20175.8005
+ 
+Begin processing firm SCHLUMBERGER TECHNOLOGY CORPORATION
+Total time taken: 20193.7545
+ 
+Begin processing firm SK TELECOM COMPANY LIMITED
+Total time taken: 20204.4699
+ 
+Begin processing firm PUBLIC SERVICE ENTERPRISE GROUP INCORPORATED
+Total time taken: 20219.5899
+ 
+Begin processing firm COCA-COLA COMPANY (THE)
+Total time taken: 20224.8048
+ 
+Begin processing firm MILLICOM INTERNATIONAL CELLULAR SA
+Total time taken: 20243.6251
+ 
+Begin processing firm COMSTOCK RESOURCES INCORPORATED
+Total time taken: 20257.553
+ 
+Begin processing firm BLOUNT INCORPORATED
+Total time taken: 20272.0197
+ 
+Begin processing firm BERRY PETROLEUM COMPANY
+Total time taken: 20280.0964
+ 
+Begin processing firm WCA WASTE CORPORATION
+Total time taken: 20288.5675
+ 
+Begin processing firm BALDOR ELECTRIC COMPANY
+Total time taken: 20293.9986
+ 
+Begin processing firm W&T OFFSHORE INCORPORATED
+Total time taken: 20299.3662
+ 
+Begin processing firm DEAN FOODS COMPANY
+Total time taken: 20307.7652
+ 
+Begin processing firm ANIXTER INCORPORATED
+Total time taken: 20318.8997
+
+
+
+

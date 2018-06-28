@@ -1,0 +1,4 @@
+'Generate an exponentially distributed random variable with parameter lambda
+Public Function expdistrib(ByVal lambda As Double)
+    expdistrib = -Log(alea()) / lambda
+End Function

@@ -1,0 +1,77 @@
+'Calculates a bivariate normal distribution 
+Function phi(X As Double) As Double
+    phi = 1 / Sqr(2 * Application.Pi()) * Exp(-X ^ 2 / 2)
+End Function
+
+
+Function fi(X As Double) As Double
+    fi = 1 / Sqr(2 * Application.Pi()) * Exp(-X ^ 2 / 2)
+End Function
+
+
+Function Gauss(X As Double) As Double
+    Gauss = Application.NormSDist(X)
+End Function
+
+
+Function Henery(X As Double, Y As Double, r As Double) As Double
+Dim ErgHen As Double
+If Abs(r) = 1 Then
+    If r > 0 Then
+        If X < Y Then
+            ErgHen = Gauss(X)
+        Else
+            ErgHen = Gauss(Y)
+        End If
+    Else
+        If X < -Y Then
+            ErgHen = 0
+        Else
+            ErgHen = Gauss(X) - Gauss(-Y)
+        End If
+    End If
+Else
+    Dim yy(1 To 5) As String
+    Dim zz(1 To 5) As String
+    yy(1) = 0.04691008
+    yy(2) = 0.23076534
+    yy(3) = 0.5
+    yy(4) = 0.76923466
+    yy(5) = 0.95308992
+    zz(1) = 0.018854042
+    zz(2) = 0.038088059
+    zz(3) = 0.0452707394
+    zz(4) = 0.038088059
+    zz(5) = 0.018854042
+    Dim hxy As Double, hx2y2 As Double, SumZwi As Double, hr As Double, hr2 As Double
+    Dim x34 As Double, x35 As Double, x36 As Double, x37 As Double, x38 As Double, x39 As Double, x55 As Double
+    Dim i As Long
+    If r ^ 2 < 0.5 Then
+        hxy = X * Y
+        hx2y2 = (X ^ 2 + Y ^ 2) / 2
+        SumZwi = 0
+        For i = 1 To 5
+            hr = r * yy(i)
+            hr2 = 1 - hr ^ 2
+            SumZwi = SumZwi + zz(i) * Exp((hr * hxy - hx2y2) / hr2) / Sqr(hr2)
+        Next
+        ErgHen = Gauss(X) * Gauss(Y) + r * SumZwi
+    Else
+        x34 = -Sqr(1 - r ^ 2)
+        x35 = (r * X - Y) / x34 * Sgn(-r)
+        x36 = -Y * Sgn(-r)
+        x37 = x35 * x36
+        x38 = (x35 ^ 2 + x36 ^ 2) / 2
+        x39 = Gauss(x35)
+        SumZwi = 0
+        For i = 1 To 5
+            hr = x34 * yy(i)
+            hr2 = 1 - hr ^ 2
+            SumZwi = SumZwi + zz(i) * Exp((hr * x37 - x38) / hr2) / Sqr(hr2)
+        Next
+        x55 = x39 * Gauss(x36) + x34 * SumZwi
+        ErgHen = Sgn(r) * x55 + Gauss(X) * ((Sgn(r) + 1) / 2 - Sgn(r) * x39)
+    End If
+End If
+Henery = ErgHen
+End Function

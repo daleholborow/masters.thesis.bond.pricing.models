@@ -1,0 +1,29 @@
+WALGREEN CO,,,,,,,,,
+TICKER:,WAG,,,,,,,,
+SIC:,5912,,,,,,,,
+GICS:,30101010,,,,,,,,
+,Aug-00,Aug-01,Aug-02,Aug-03,Aug-04,Aug-05,Aug-06,Aug-07,Aug-08
+Cash,12.8,16.9,449.9,1017.1,1695.5,1071.6,1335,@NA,@NA
+Receivables,614.5,798.3,954.8,1017.8,1169.1,1396.3,2062.7,@NA,@NA
+Bad Debt Reserve,2.677,2.551,2.062,2.594,2.363,3.142,2.703,@NA,@NA
+Inventory,2830.8,3482.4,3645.2,4202.7,4738.6,5592.7,6050.4,@NA,@NA
+Total Current Assets,3550.1,4393.9,5166.5,6358.1,7764.4,8316.5,9705.4,@NA,@NA
+PP&E,3428.2,4345.3,4591.4,4940,5446.4,6165,6948.9,@NA,@NA
+Intangibles,0,0,0,0,73.6,84,434.7,@NA,@NA
+Deferred Charges,0,0,0,0,0,0,0,@NA,@NA
+Equity Investments,0,0,0,0,0,0,0,@NA,@NA
+Other Investments,0,0,0,0,0,0,0,@NA,@NA
+Total Assets,7103.7,8833.8,9878.8,11405.9,13342.1,14608.8,17131.1,@NA,@NA
+Debt - Current Portion ,@CF,@CF,@CF,8.1,4.3,1.1,0.9,@NA,@NA
+Notes Payable,0,440.7,0,0,226.7,339.4,575.3,@NA,@NA
+Accounts Payable,1364,1546.8,1836.4,2077,2414.8,2578.8,3463.9,@NA,@NA
+Taxes Payable,92,86.6,100.9,105.8,65.9,70.9,2.8,@NA,@NA
+Total Current Liabilities,2303.7,3011.6,2955.2,3420.5,4077.9,4481,5755.3,@NA,@NA
+Total Long Term Debt,18.2,20.8,11.2,13.7,46.4,38.6,38.7,@NA,@NA
+Deferred LT Taxes,101.6,137,176.5,228,274.1,240.4,141.1,@NA,@NA
+Minority Interests,0,0,0,0,0,0,@CF,@NA,@NA
+Total Liabilities,2869.7,3626.6,3648.6,4210.2,5202.4,5719.1,7015.3,@NA,@NA
+Preferred Stock - Total,0,0,0,0,0,0,0,@NA,@NA
+Common Equity,4234,5207.2,6230.2,7195.7,8139.7,8889.7,10115.8,@NA,@NA
+Total Stockholders' Equity,4234,5207.2,6230.2,7195.7,8139.7,8889.7,10115.8,@NA,@NA
+Common Shares O/S,1010.819,1019.425,1024.908,1024.908,1023.293,1013.512,1007.862,@NA,@NA

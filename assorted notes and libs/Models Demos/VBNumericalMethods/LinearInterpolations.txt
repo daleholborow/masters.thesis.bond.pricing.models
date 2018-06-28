@@ -1,0 +1,55 @@
+
+'Linear Interpolation (e.g. of interest rates or volatilities): x_v = Datevector,y_v = valuevector, X = date
+
+Function inter2(x_v As Object, y_v As Object, X As Variant) As Double
+    Dim n As Long, ind As Long, i As Long
+    n = x_v.Rows.Count
+    If X < x_v(1) Then
+        inter2 = y_v(1)
+    ElseIf X > x_v(n) Then
+        inter2 = y_v(n)
+    Else
+        For i = 1 To n
+            If x_v(i) <= X Then
+                ind = ind + 1
+            Else
+                ind = ind
+            End If
+        Next
+        Dim X1 As Variant, X2 As Variant, Y1 As Double, Y2 As Double
+        X1 = x_v(ind)
+        X2 = x_v(ind + 1)
+        Y1 = y_v(ind)
+        Y2 = y_v(ind + 1)
+        inter2 = (Y1 * (X2 - X) + Y2 * (X - X1)) / (X2 - X1)
+    End If
+End Function
+
+
+
+
+'Interpolation of Discountfactors: x_v = Datevector,y_v = discountvector, X = date
+
+Function inter3(x_v As Object, y_v As Object, X As Variant) As Double
+    Dim n As Long, ind As Long, i As Long
+    n = x_v.Rows.Count
+    If X < x_v(1) Then
+        inter3 = y_v(1)
+    ElseIf X > x_v(n) Then
+        inter3 = y_v(n)
+    Else
+        For i = 1 To n
+            If x_v(i) <= X Then
+                ind = ind + 1
+            Else
+                ind = ind
+            End If
+        Next
+        Dim X1 As Variant, X2 As Variant, Y1 As Double, Y2 As Double
+        X1 = x_v(ind)
+        X2 = x_v(ind + 1)
+        Y1 = y_v(ind)
+        Y2 = y_v(ind + 1)
+        inter3 = Y1 ^ ((X * (X2 - X)) / (X1 * (X2 - X1))) * Y2 ^ ((X * (X - X1)) / (X2 * (X2 - X1)))
+    End If
+End Function

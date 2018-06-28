@@ -1,0 +1,15 @@
+'Simulate a Poisson distributed randome variable with parameter lambda
+
+Public Function Randpoisson(ByVal lambda As Double) As Double
+       Dim N As Integer
+       Dim temp As Double
+
+       temp = alea()
+       N = 1
+       While (temp > Exp(-lambda))
+             N = N + 1
+             temp = temp * alea()
+       Wend
+
+       Randpoisson = N - 1
+End Function
