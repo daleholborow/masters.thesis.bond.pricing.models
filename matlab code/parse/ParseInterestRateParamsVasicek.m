@@ -1,0 +1,271 @@
+function [vasicekParams] = ParseInterestRateParamsVasicek(forceReload)
+%--------------------------------------------------------------------------
+% @description:	ParseInterestRateParamsVasicek
+%				Read in the csv of historic yield curve zero spot rates, and 
+%				store an estimation of the Vasicek1977 parameters which 
+%				would generate a curve to most closely match those observed 
+%				values.
+%				Takes in a csv file like:
+%				Date,1,2,3,4,5,6,7,8,9,10,11,12,24,36,48... <- months
+%				1/1/1997,6.9,7.0,7.2,6.8 <- yield curve values
+%				For each set of daily observations, estimate the parameters 
+%				in the Vasicek1977 model which would generate that yield
+%				curve, and store them in in a binary file for quick future
+%				retrieval.
+%--------------------------------------------------------------------------
+	
+% 	tic
+% 	clc
+% 	clear all
+% 	close all
+% 	tic
+	if nargin == 0
+		forceReload = false;
+	end
+	
+	constants				= Constants();
+	paths					= PathInfo();
+	
+	% If values already exist stored as a matlab binary file
+	if 2 == exist(paths.PreCalVasicekPredictFile) && ~forceReload
+		
+		load(paths.PreCalVasicekPredictFile, paths.PreCalVasicekPredictVar);
+		disp('Retrieved Vasicek parameter data from binary file');
+		
+	% Else load up the values from precalculated csv source files.
+	else
+	
+	% 	dataIn					= cell(7,17);
+	% 	dataIn(1,:)	= {'Date'	1	2	3	4	5	6	7	8	9	10	11	12	24	36	48	60};
+	% 	dataIn(2,:)	= {'1/01/2001'	6.8586	6.7603	6.6479	6.5572	6.4748	6.3897	6.3244	6.2591	6.1938	6.157	6.1202	6.0833	5.9633	6.0182	6.0511	6.1078};
+	% 	dataIn(3,:)	= {'2/01/2001'	6.858	6.7597	6.6479	6.5572	6.476	6.3897	6.3244	6.2591	6.1938	6.157	6.1202	6.0833	5.7544	5.7791	5.8025	5.8485};
+	% 	dataIn(4,:)	= {'3/01/2001'	6.858	6.7597	6.6479	6.5572	6.476	6.3897	6.3244	6.2591	6.1938	6.157	6.1202	6.0833	5.7544	5.7791	5.8025	5.8485};
+	% 	dataIn(5,:)	= {'4/01/2001'	6.1698	6.1127	6.001	5.913	5.8197	5.7273	5.6694	5.6115	5.5536	5.5307	5.5079	5.4851	5.5841	5.6906	5.7989	5.8876};
+	% 	dataIn(6,:)	= {'5/01/2001'	6.1163	5.9636	5.811	5.7556	5.6952	5.6444	5.597	5.5496	5.5022	5.4695	5.4367	5.404	5.4405	5.5473	5.6559	5.733};
+	% 	dataIn(7,:)	= {'8/01/2001'	6.13	5.9732	5.8176	5.7275	5.6386	5.5708	5.5282	5.4856	5.4431	5.4208	5.3985	5.3761	5.3163	5.4021	5.4895	5.5671};
+
+
+		[dataIn, result]		= readtext(paths.HistoricInterestRateFile, ...
+			'[,]', '', '"', 'empty2NaN');
+		[dataInRows dataInCols]	= size(dataIn);
+
+		% Store a copy of the original data values, so that we can save them to
+		% csv file for handy future reference. We will append our calculated
+		% values to the end columns.
+		dataOut					= dataIn;
+		dataOut(1,dataInCols+1)	= {'r0'};
+		dataOut(1,dataInCols+2)	= {'theta'};
+		dataOut(1,dataInCols+3)	= {'kappa'};
+		dataOut(1,dataInCols+4)	= {'eta'};
+
+
+		% Override dateInCols in order to trim out long end of yield curve
+	% 	dataInCols		= 13;	% Out to 1 year
+	% 	dataInCols		= 14;	% Out to 2 years
+	% 	dataInCols		= 15;	% Out to 3 years
+	% 	dataInCols		= 22;	% Out to 10 years
+
+		% Pull out the maturity, observation date and market interest rate 
+		% observation values from the source CSV file:
+		mrktTausMths	= cell2mat(dataIn(1,2:dataInCols));
+		obsDates		= dataIn(2:dataInRows,1);
+		mrktYields		= cell2mat(dataIn(2:dataInRows, 2:dataInCols));
+		[rateObsRows rateObsCols] = size(mrktYields);
+
+		% Convert cells to matrices so we can pass them into our
+		% parameterisation functions, we store the mrktTaus in YEARS for yearly
+		% parameter estimates
+		mrktTaus		= mrktTausMths(1,:)/12;
+
+		% Store each daily observation of interest rate values and our
+		% estimated parameters in a hash
+		vasicekParams	= hashtable;
+
+		% Day by day, go through the interest rate observations and try to
+		% predict the parameters that would have generated such a term
+		% structure, storing them in a cell so we can save the processed values
+		% out to a CSV file:
+		for obsIndex = 1 : 1 : rateObsRows
+
+	% 		if obsIndex == 2
+	% 			error('failed here for testing');
+	% 		end
+
+			if mod(obsIndex,1) == 0
+
+				disp(['Processing record #' num2str(obsIndex)]);
+
+				dailyRateObs	= mrktYields(obsIndex,:)/100;
+				dailyParams		= YieldCurveFitVasicek(mrktTaus, dailyRateObs);
+				dailyParams.ObsDateNum	= datenum(obsDates(obsIndex,1), constants.DateStringAU);
+
+				for mrktTausMths_i = 1 : 1 : length(mrktTausMths)
+					varnameMt	= ['m' num2str(mrktTausMths(mrktTausMths_i))];
+					dailyParams.(varnameMt)	= dailyRateObs(mrktTausMths_i);
+				end
+				
+				observedOn = datestr(dailyParams.ObsDateNum)
+				guessR0		= dailyParams.r0
+				guesstheta	= dailyParams.theta
+				guesskappa	= dailyParams.kappa
+				guesseta	= dailyParams.eta
+				
+				
+% 			guessR0 =
+% 0.0572
+% guesstheta =
+% 0.1099
+% guesskappa =
+% 0.0142
+% guesseta =
+% 2.2204e-014
+				
+				vasicekParams = put(vasicekParams, dailyParams.ObsDateNum, dailyParams);
+
+
+				% Now, given a set of estimated paramteres, plot the observed yield
+				% curve for this, and compare that with the curve generated by our
+				% estimated values:
+				guessPrices	= UnitDiscBondVasicek(mrktTaus,dailyParams);
+				guessYields	= CalcDiscountBondYield(mrktTaus, guessPrices);
+				
+				close all;
+				hold on;
+				plot(mrktTaus, dailyRateObs, 'g-s');
+				plot(mrktTaus, guessYields, 'r-x');
+				axis([0,max(mrktTaus),0.01,0.11]);
+				pause(0.55)
+				
+				% Finally, add our calculated values to the dataOut object
+				dataOut(obsIndex+1,dataInCols+1)	= {dailyParams.r0};
+				dataOut(obsIndex+1,dataInCols+2)	= {dailyParams.theta};
+				dataOut(obsIndex+1,dataInCols+3)	= {dailyParams.kappa};
+				dataOut(obsIndex+1,dataInCols+4)	= {dailyParams.eta};
+
+			end
+
+		end
+		
+		% Now, we want to save the dataOut values to csv so we can view them
+		% easily for future reference.
+	% 	dataOut
+
+% 		% Where do we want to save our results to?
+% 		destination	= paths.VasicekPredictions;
+% 		WriteCellToCsv(destination, dataOut);
+% 
+% 		% Also save the binary file, so we don't have to go through this
+% 		% process again next time:
+% 		save(paths.PreCalVasicekPredictFile, paths.PreCalVasicekPredictVar);
+	
+	end
+% 	toc
+end
+
+
+function [params] = YieldCurveFitVasicek(mrktTaus, mrktYields)
+%--------------------------------------------------------------------------
+% @description:	Attempt to estimate the parameters of the Vasicek 
+%				1977 short-term risk-free interest rate 
+%				term structure model of yields. We do this by
+%				using least-squares for a cross-sectional data set, that
+%				is, a structural yield-to-maturity curve for zero-coupon 
+% 				treasury instruments.
+% @params:
+%	mrktTaus	- Matrix of times to maturity for which we are calculating 
+%				the yield-to-maturity under Vasicek model. Must be a 
+%				1*n or an n*1 matrix... m*n will cause irregular results.
+%	mrktYields	- Matrix of observed yields-to-maturity that correspond to
+%				the matching index in mrktTaus.
+% @example:
+%				mrktTaus			= [.125,.25,.5,1,2,3,5,7,10,20,30];
+%				mrktYields	=
+%				[2.57,3.18,3.45,3.34,3.12,3.13,3.52,3.77,4.11,4.56,4.51];
+%				mrktYields = mrktYields / 100;
+%				params = YieldCurveFitVasicek(mrktTaus, mrktYields)
+% @author:		Dale Holborow, daleholborow@hotmail.com, August 7, 2008
+%--------------------------------------------------------------------------
+
+	% Set up some initial values for parameter guesses. Had initial
+	% troubles trying to use 'sensible' initial guesses with low number of 
+	% function eval/iterations. Resolved by greatly increasing number of 
+	% function eval/iterations in order to be sure end result was precice,
+	% so initial param estimates become far less important, now we just use
+	% some random approximations in the rough vacinity of the expected
+	% answers:
+% 	pars(1)		= 0.25*rand	% interest rate r0
+% 	pars(2)		= 0.25*rand	% interest rate long term mean theta
+% 	pars(3)		= 0.40*rand	% interest rate mean reversion rate kappa
+% 	pars(4)		= 0.05*rand  % interest rate volatility eta
+	pars(1)		= mrktYields(1);		% interest rate r0
+	pars(2)		= mrktYields(end);	% interest rate long term mean theta
+	pars(3)		= 0.40*rand;		% interest rate mean reversion rate kappa
+	pars(4)		= 0.05*rand;		% interest rate volatility eta
+
+
+	% Specify some lower/upper bounds for each parameter we will be
+	% estimating (r,theta,kappa,eta):
+	lowBound			= [0, 0, -10, 0];
+	upBound				= [0.15, 0.25, 10, 10];
+
+	% Make optimisation routine VERY precice by performing the routine LOTS
+	% of times. Sacrifice a bit of speed for a highly precise and accurate
+	% answer (hopefully).
+	options				= optimset('lsqnonlin');
+	options.TolFun		= 10^-20;
+	options.MaxFunEvals = 4*1000;
+	options.MaxIter		= 4*1000;
+	options.TolX		= 10^-10;
+	options.Display		= 'off';
+
+	% Now, estimate our optimal parameters to match the observed market yield 
+	% curve values.
+	[pars,resNorm,residual,exitFlag,output] = lsqnonlin(@(pars) ...
+		VasicekFit(pars),pars,lowBound,upBound,options);
+
+
+	% Retrieve the optimal values and place them into a structure so they
+	% can be returned by the function.
+	params.r0		= pars(1);
+	params.theta	= pars(2);
+	params.kappa	= pars(3);
+	params.eta		= pars(4);
+
+	%%% End optimal parameter estimation logic %%%
+
+
+	%----------------------------------------------------------------------
+	% @description:	Return the array of differences between predicted and
+	%				observed yields-to-maturity based on an estimated
+	%				parameter set, so we can implement our least-squared
+	%				error algorithm.
+	function [F] = VasicekFit(tmpPars)
+		tmpParams.r0	= tmpPars(1);
+		tmpParams.theta	= tmpPars(2);
+		tmpParams.kappa	= tmpPars(3);
+		tmpParams.eta	= tmpPars(4);
+
+		prices	= UnitDiscBondVasicek(mrktTaus,tmpParams);
+		yields	= CalcDiscountBondYield(mrktTaus,prices);
+
+% 		if isinf(yields)
+% 			yields
+% 			tmpPars
+% 			error('VasicekFit: Infinite values detected for yield.')
+% 		end
+
+		F = mrktYields - yields;
+	end
+end
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+Public Function S(ByVal r, ByVal sigma, ByVal S0, ByVal N, ByVal start, ByVal fin)
+'Simulate a lognormal dynamic for a stock
+Dim stock() As Double
+Dim i As Long
+Dim dt As Double
+
+ReDim sigma(0 To N)
+stock(0) = S0
+dt = (fin - start) / N
+
+For i = 1 To N
+    temp = alea()
+    stock(i) = stock(i - 1) * Exp((r - 0.5 * sigma * sigma) * dt + Sqr(dt) * sigma * Application.WorksheetFunction.NormSInv(temp))
+Next i
+S = stock
+End Function

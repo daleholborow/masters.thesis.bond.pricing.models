@@ -1,0 +1,19 @@
+' Calculates the Bond Price Curve for a given coupon, given dates and gives present values
+
+Function B_Price_Curve(Sett_d As Date, Mat_d As Double, Cpn As Double, Date_v As Object, PV_v As Object) As Double
+
+    Dim t As Double, PV As Double, tau As Double, df As Double
+    t = (Mat_d - Sett_d) / 365
+    If t <= 0 Then
+        B_Price_Curve = 0
+        Exit Function
+    End If
+    df = inter2(Date_v, PV_v, Sett_d)
+    PV = -(1 - t + Int(t)) * Cpn * df
+    For tau = t - Int(t) To t
+        df = inter2(Date_v, PV_v, tau * 365 + Sett_d)
+        PV = PV + Cpn * df
+    Next tau
+    PV = PV + 100 * df
+    B_Price_Curve = PV
+End Function

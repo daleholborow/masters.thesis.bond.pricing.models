@@ -1,0 +1,22 @@
+' Calculates the implied volatility of an european option, uses black scholes greeks.
+Function option_e_implvola(Put_Call As String, S As Double, e As Double, Tmt As Double, r As Double, q As Double, O As Double) As Double
+
+    Dim v As Double, dv As Double, dif As Double, vega As Double
+    v = 0.3
+    Dim n As Long
+    Const nmax = 100
+    Const ItError = 0.001
+    n = 1
+    
+    dv = ItError + 1
+    While (Abs(dv) > ItError) And (n <= nmax)
+        dif = option_e(Put_Call, S, e, Tmt, r, q, v, "Price") - O
+        vega = option_e(Put_Call, S, e, Tmt, r, q, v, "vega") / 0.01
+        dv = dif / vega
+        v = v - dv
+        n = n + 1
+    Wend
+    
+    If n <= nmax Then option_e_implvola = v Else option_e_implvola = -1
+
+End Function

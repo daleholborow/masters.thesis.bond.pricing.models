@@ -1,0 +1,10 @@
+'Simulate a Normal Inverse Guassian (NIG) distributed random variable
+Public Function NIG(ByVal a As Double, ByVal B As Double, ByVal mu As Double, ByVal d As Double) As Double
+'Reference : Rydberg-MC method
+Dim z, x As Double
+    
+    z = IG(d, Sqr(a * a - B * B))
+    x = Gauss()
+    
+    NIG = mu + B * z + Sqr(z) * x
+End Function

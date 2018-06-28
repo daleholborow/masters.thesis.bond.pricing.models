@@ -1,0 +1,13 @@
+Public Function Brownian_process(ByVal j, ByVal N, ByVal r, ByVal sigma)
+'Simulate a Brownian process N(r,sigma) startting at time t(j)
+
+Dim vec() As Double
+Dim i As Long
+
+ReDim vec(j To N)
+
+For i = j To N
+    vec(i) = r + sigma * Gauss()
+Next i
+Brownian_process = vec
+End Function

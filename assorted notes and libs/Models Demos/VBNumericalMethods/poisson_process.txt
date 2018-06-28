@@ -1,0 +1,40 @@
+Public Function Poisson_process(ByVal lambda, ByVal N, ByVal start, ByVal fin, Optional vect0 As Double)
+'Simulate a Poisson process with parameter lambda
+Dim vect(), t(), sum() As Double
+Dim i, compte As Long
+Dim dt As Double
+
+ReDim vect(0 To N)
+ReDim t(0)
+ReDim sum(0)
+
+dt = (fin - start) / N
+
+vect(0) = vect0
+t(0) = 0
+sum(0) = t(0)
+
+i = 0
+While (sum(i) <= fin)
+    ReDim Preserve sum(0 To i + 1)
+    ReDim Preserve t(0 To i + 1)
+    t(i + 1) = expdistrib(lambda)
+    sum(i + 1) = sum(i) + t(i + 1)
+    i = i + 1
+Wend
+
+nb = i - 1
+
+For i = 1 To N
+    compte = 0
+    somme = 0
+    j = 0
+    
+    While ((sum(compte) <= dt * i) And (compte <= nb))
+        compte = compte + 1
+    Wend
+
+    vect(i) = compte - 1
+Next i
+Poisson_process = vect
+End Function

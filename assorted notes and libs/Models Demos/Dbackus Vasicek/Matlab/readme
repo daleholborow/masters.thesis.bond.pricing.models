@@ -1,0 +1,48 @@
+                                                    Backus and Zin, March 1999
+
+GUIDE TO MATLAB FILES
+
+Files are of two types.  Programs do calculations for a variety of tasks,
+including numbers and figures for notes, answers to assignments, and tests
+of routines.  Procedures (functions) do specialized tasks that we find
+convenient to organize in files:  Black-Scholes formula, calibrate BDT, etc.
+Details on the latter are available in Matlab's help facility:  type "help x"
+for help on procedure x.  To run a program, simply type its name in Matlab.
+Eg, adlec4 runs the program adlec4.m.
+
+Programs
+     adlecn.m       numbers and figures for lecture n
+     ans99s.m       calculations for assignments (spring 99)
+
+Statistical procedures
+     acf.m          autocorrelation function
+     moments.m      mean, st dev, skewness, kurtosis
+
+Data
+     sfb2.yld       treasury spot rates (see adlec1.m)
+     dmr.txt        DM swap rates (see dmrates.m)
+
+Option procedures
+     opbs.m         Black-Scholes option prices
+     ivbs.m         implied volatility from Black-Scholes
+     cdfnor.m       cumulative std normal cdf
+     plusop.m       compute "x+" = max(x,0) of a matrix
+
+Binomial procedures
+
+     treetest.m     runs various tree programs
+     treehl.m       generates Ho-Lee rate tree from parameters
+     treebdt.m      generates Black-Derman-Toy rate tree from parameters
+     r2ybi.m        computes spot rates from short rate tree
+     d2qbi.m        computes state prices from rate tree
+     calmubi.m      finds drift parameters to fit current spot rates
+     pathbi.m       computes price tree from cash flows and rate tree
+
+Trinomial procedures
+     coming !!!
+
+
+Please address comments to Dave Backus (dbackus@stern.nyu.edu) or Stan Zin
+(zin@bobbyorr.gsia.cmu.edu).  With the exception of students, we do not
+generally provide help.  Good luck!
+

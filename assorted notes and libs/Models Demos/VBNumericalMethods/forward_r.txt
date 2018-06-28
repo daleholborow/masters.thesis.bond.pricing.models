@@ -1,0 +1,13 @@
+
+Function forward_r(Date_v As Object, PV_v As Object, Sett_d As Date, Eff_d As Date, Life As Long) As Double
+' Computes the forward rate with given dates and present values
+    Dim i As Long
+    Dim zwi As Double
+    Dim t As Date
+        zwi = 0
+    For i = 1 To Life
+        t = DateSerial(Year(Eff_d) + i, Month(Eff_d), Day(Eff_d))
+        zwi = zwi + df(Date_v, PV_v, Sett_d, t)
+    Next
+    forward_r = 100 * (df(Date_v, PV_v, Sett_d, Eff_d) - df(Date_v, PV_v, Sett_d, t)) / zwi
+End Function

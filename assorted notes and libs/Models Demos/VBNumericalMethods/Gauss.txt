@@ -1,0 +1,10 @@
+'Simulate a Gaussian variable N(0,1)
+Public Function Gauss()
+          Dim fac As Double, r As Double, V1 As Double, V2 As Double
+10          V1 = 2 * Rnd - 1
+          V2 = 2 * Rnd - 1
+          r = V1 ^ 2 + V2 ^ 2
+          If (r >= 1) Then GoTo 10
+          fac = Sqr(-2 * Log(r) / r)
+          Gauss = V2 * fac
+End Function

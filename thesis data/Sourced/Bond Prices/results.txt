@@ -1,0 +1,297 @@
+Total # companies found: 14
+ 
+Begin processing firm ROCKWELL COLLINS INCORPORATED
+predBPrM =
+   0.96755883122366
+predYldM =
+   0.05388587416315
+ActBPr =
+   1.00379900000000
+ActYld =
+   0.04922206932246
+predBPrLS =
+   0.78984556832236
+predYldLS =
+   0.08023424415651
+ActBPr =
+   1.00379900000000
+ActYld =
+   0.04922206932246
+Priced over the risk-free rate of: 0.038298
+The bond was priced on: 20-Nov-2003
+ 
+Begin processing firm SCHLUMBERGER TECHNOLOGY CORPORATION
+predBPrM =
+   1.05820533861102
+predYldM =
+   0.05645720915044
+ActBPr =
+   1.00626400000000
+ActYld =
+   0.06310154606634
+predBPrLS =
+   0.95123132409002
+predYldLS =
+   0.07061237279213
+ActBPr =
+   1.00626400000000
+ActYld =
+   0.06310154606634
+Priced over the risk-free rate of: 0.040253
+The bond was priced on: 16-Apr-2002
+ 
+Begin processing firm SK TELECOM COMPANY LIMITED
+predBPrM =
+   0.96328892179801
+predYldM =
+   0.05167472286133
+ActBPr =
+   0.98731400000000
+ActYld =
+   0.04756150499910
+predBPrLS =
+   0.90339313550834
+predYldLS =
+   0.06241860439271
+ActBPr =
+   0.98731400000000
+ActYld =
+   0.04756150499910
+Priced over the risk-free rate of: 0.043396
+The bond was priced on: 26-Mar-2004
+ 
+Begin processing firm PUBLIC SERVICE ENTERPRISE GROUP INCORPORATED
+predBPrM =
+   0.96539225998271
+predYldM =
+   0.05386602317855
+ActBPr =
+   0.99988400000000
+ActYld =
+   0.04946389450812
+predBPrLS =
+   0.86018457928469
+predYldLS =
+   0.06852096810599
+ActBPr =
+   0.99988400000000
+ActYld =
+   0.04946389450812
+Priced over the risk-free rate of: 0.049477
+The bond was priced on: 20-Aug-2004
+ 
+Begin processing firm COCA-COLA COMPANY (THE)
+predBPrM =
+   1.00658770581470
+predYldM =
+   0.05503668646032
+ActBPr =
+   0.99367100000000
+ActYld =
+   0.05673913976352
+predBPrLS =
+   1.00658790694017
+predYldLS =
+   0.05503666157139
+ActBPr =
+   0.99367100000000
+ActYld =
+   0.05673913976352
+Priced over the risk-free rate of: 0.063681
+The bond was priced on: 31-Oct-2007
+ 
+Begin processing firm MILLICOM INTERNATIONAL CELLULAR SA
+predBPrM =
+   1.37959554761991
+predYldM =
+   0.05534882525364
+ActBPr =
+   1.01277800000000
+ActYld =
+   0.10283495922509
+predBPrLS =
+   1.30882825969141
+predYldLS =
+   0.06311843015878
+ActBPr =
+   1.01277800000000
+ActYld =
+   0.10283495922509
+Priced over the risk-free rate of: 0.038298
+The bond was priced on: 20-Nov-2003
+ 
+Begin processing firm COMSTOCK RESOURCES INCORPORATED
+predBPrM =
+   1.13243049163195
+predYldM =
+   0.05251392631063
+ActBPr =
+   1.01000000000000
+ActYld =
+   0.07114741509319
+predBPrLS =
+   1.04817680381517
+predYldLS =
+   0.06507431981283
+ActBPr =
+   1.01000000000000
+ActYld =
+   0.07114741509319
+Priced over the risk-free rate of: 0.041803
+The bond was priced on: 20-Feb-2004
+ 
+Begin processing firm BLOUNT INCORPORATED
+predBPrM =
+   1.19612050131549
+predYldM =
+   0.05704071733654
+ActBPr =
+   1.02299300000000
+ActYld =
+   0.08312321256182
+predBPrLS =
+   0.82058956301459
+predYldLS =
+   0.12131695424541
+ActBPr =
+   1.02299300000000
+ActYld =
+   0.08312321256182
+Priced over the risk-free rate of: 0.045677
+The bond was priced on: 06-Aug-2004
+ 
+Begin processing firm BERRY PETROLEUM COMPANY
+predBPrM =
+   1.25587820709359
+predYldM =
+   0.05338131600108
+ActBPr =
+   1.00397900000000
+ActYld =
+   0.08581349112093
+predBPrLS =
+   0.87664753171474
+predYldLS =
+   0.10651889458147
+ActBPr =
+   1.00397900000000
+ActYld =
+   0.08581349112093
+Priced over the risk-free rate of: 0.050716
+The bond was priced on: 20-Oct-2006
+ 
+Begin processing firm WCA WASTE CORPORATION
+predBPrM =
+   1.27037864412417
+predYldM =
+   0.05450944826620
+ActBPr =
+   1.08258300000000
+ActYld =
+   0.08359856323569
+predBPrLS =
+   1.03612315249455
+predYldLS =
+   0.09177472293914
+ActBPr =
+   1.08258300000000
+ActYld =
+   0.08359856323569
+Priced over the risk-free rate of: 0.046891
+The bond was priced on: 06-Dec-2006
+ 
+Begin processing firm BALDOR ELECTRIC COMPANY
+predBPrM =
+   1.25965064771187
+predYldM =
+   0.05624732403687
+ActBPr =
+   1.03148900000000
+ActYld =
+   0.08547886899324
+predBPrLS =
+   0.97409890872312
+predYldLS =
+   0.09418468705233
+ActBPr =
+   1.03148900000000
+ActYld =
+   0.08547886899324
+Priced over the risk-free rate of: 0.055567
+The bond was priced on: 29-Jan-2007
+ 
+Begin processing firm W&T OFFSHORE INCORPORATED
+predBPrM =
+   1.10497492588848
+predYldM =
+   0.06285881500645
+ActBPr =
+   0.99979100000000
+ActYld =
+   0.08108981130818
+predBPrLS =
+   0.83566837093284
+predYldLS =
+   0.11457393570232
+ActBPr =
+   0.99979100000000
+ActYld =
+   0.08108981130818
+Priced over the risk-free rate of: 0.058453
+The bond was priced on: 20-Jun-2007
+ 
+Begin processing firm DEAN FOODS COMPANY
+predBPrM =
+   1.16754464491097
+predYldM =
+   0.05172579417887
+ActBPr =
+   0.99019400000000
+ActYld =
+   0.07450397901733
+predBPrLS =
+   0.94543367515373
+predYldLS =
+   0.08108626358251
+ActBPr =
+   0.99019400000000
+ActYld =
+   0.07450397901733
+Priced over the risk-free rate of: 0.04704
+The bond was priced on: 15-May-2006
+
+
+
+Begin processing firm ANIXTER INCORPORATED
+predBPrM =
+   1.07778841970252
+predYldM =
+   0.05249807201253
+ActBPr =
+   1.00755800000000
+ActYld =
+   0.06150271048481
+predBPrLS =
+   0.97259454385617
+predYldLS =
+   0.06627509088077
+ActBPr =
+   1.00755800000000
+ActYld =
+   0.06150271048481
+Priced over the risk-free rate of: 0.049371
+The bond was priced on: 28-Feb-2005
+
+
+
+
+
+
+
+
+
+
+
+
+
+

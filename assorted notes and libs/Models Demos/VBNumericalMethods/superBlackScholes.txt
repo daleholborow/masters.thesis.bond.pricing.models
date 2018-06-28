@@ -1,0 +1,67 @@
+' Calculates the value of an European Option (Black-Scholes)
+' Typ -> Call or Put
+' Command -> Price, Delta, Gamma, Theta, Vega, Rho
+
+Function phi(X As Double) As Double
+    phi = 1 / Sqr(2 * Application.Pi()) * Exp(-X ^ 2 / 2)
+End Function
+
+
+Function fi(X As Double) As Double
+    fi = 1 / Sqr(2 * Application.Pi()) * Exp(-X ^ 2 / 2)
+End Function
+
+
+Function Gauss(X As Double) As Double
+    Gauss = Application.NormSDist(X)
+End Function
+
+Function option_e(Put_Call As String, S As Double, e As Double, Tmt As Double, r As Double, q As Double, sigma As Double, Command As String) As Double
+' Calculates the value of an European Option (Black-Scholes)
+' Typ -> Call or Put
+' Command -> Price, Delta, Gamma, Theta, Vega, Rho
+    
+    Tmt = Application.Max(0.00001, Tmt)
+    
+    Dim Sign As Integer
+    Dim d1 As Double, d2 As Double, ed1 As Double, ed2 As Double
+    Select Case UCase$(Left$(Put_Call, 1))
+        Case "C": Sign = 1
+        Case "P": Sign = -1
+        Case Else: MsgBox "Not valid."
+                   option_e = 0
+                   Exit Function
+       
+    End Select
+    
+    If (sigma * S * Tmt > 0) Then
+        d1 = (Log(S / e) + (r - q + 0.5 * sigma * sigma) * Tmt) / (sigma * Sqr(Tmt))
+        ed1 = Gauss(Sign * d1)
+        d2 = d1 - sigma * Sqr(Tmt)
+        ed2 = Gauss(Sign * d2)
+    Else
+        If (S < e) Then
+            ed1 = 0.5 * (1 - Sign)
+        Else
+            ed1 = 0.5 * (1 + Sign)
+        End If
+        ed2 = ed1
+    End If
+    Select Case UCase$(Left$(Command, 1))
+        Case "P": option_e = Sign * (S * Exp(-q * Tmt) * ed1 - e * Exp(-r * Tmt) * ed2) ' Price
+        Case "D": option_e = Sign * Exp(-q * Tmt) * ed1 ' Delta
+        Case "G":
+                      If S * sigma * Tmt > 0 Then
+                         option_e = Exp(-q * Tmt) * phi(d1) / (sigma * S * Sqr(Tmt))
+                      Else: option_e = 0
+                      End If ' Gamma
+        Case "T":
+                option_e = (-0.5 * S * sigma * Exp(-q * Tmt) * phi(d1) / Sqr(Tmt) _
+                        + Sign * (q * S * Exp(-q * Tmt) * ed1 - r * e * Exp(-r * Tmt) * ed2)) / 365.25 ' Theta 1/Day
+        Case "V": option_e = 0.01 * Exp(-q * Tmt) * phi(d1) * S * Sqr(Tmt) ' Vega [1/%]
+        Case "Q": option_e = -0.01 * Sign * S * Tmt * Exp(-q * Tmt) * ed1 ' Divi-Yield-Sensitivität [1/%]
+        Case "R": option_e = 0.01 * Sign * e * Tmt * Exp(-r * Tmt) * ed2 ' Rho [1/%]
+        Case Else: MsgBox "Illegal output query '" & Command & "'"
+                   option_e2 = 0
+    End Select
+End Function
